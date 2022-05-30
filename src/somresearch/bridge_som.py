@@ -35,21 +35,24 @@ assert(args.model_id is not None)
 
 def train(sp):
     dataset = data_loader.load_processed_data(args)
-    train_data = dataset['train']
-    print('{} training examples loaded'.format(len(train_data)))
-    dev_data = dataset['dev']
-    print('{} dev examples loaded'.format(len(dev_data)))
 
-    if args.xavier_initialization:
-        ops.initialize_module(sp.mdl, 'xavier')
-    else:
-        raise NotImplementedError
 
-    sp.schema_graphs = dataset['schema']
-    if args.checkpoint_path is not None:
-        sp.load_checkpoint(args.checkpoint_path)
+    print(dataset)
+    # train_data = dataset['train']
+    # print('{} training examples loaded'.format(len(train_data)))
+    # dev_data = dataset['dev']
+    # print('{} dev examples loaded'.format(len(dev_data)))
 
-    if args.test:
-        train_data = train_data + dev_data
+    # if args.xavier_initialization:
+    #     ops.initialize_module(sp.mdl, 'xavier')
+    # else:
+    #     raise NotImplementedError
 
-    sp.run_train(train_data, dev_data)
+    # sp.schema_graphs = dataset['schema']
+    # if args.checkpoint_path is not None:
+    #     sp.load_checkpoint(args.checkpoint_path)
+
+    # if args.test:
+    #     train_data = train_data + dev_data
+
+    # sp.run_train(train_data, dev_data)

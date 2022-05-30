@@ -23,21 +23,23 @@ import src.utils.utils as utils
 import torch
 # if not args.data_parallel:
 #     torch.cuda.set_device('cuda:{}'.format(args.gpu))
-torch.manual_seed(args.seed)
-torch.cuda.manual_seed_all(args.seed)
+# torch.manual_seed(args.seed)
+# torch.cuda.manual_seed_all(args.seed)
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Set model ID
-args.model_id = utils.model_index[args.model]
-assert(args.model_id is not None)
+# # Set model ID
+# args.model_id = utils.model_index[args.model]
+# assert(args.model_id is not None)
 
 
 def train(sp):
-    dataset = data_loader.load_processed_data(args)
+    # dataset = data_loader.load_processed_data(args)
+
+    print("hola")
+    # print(dataset)
 
 
-    print(dataset)
     # train_data = dataset['train']
     # print('{} training examples loaded'.format(len(train_data)))
     # dev_data = dataset['dev']

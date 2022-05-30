@@ -1,26 +1,4 @@
-import random
-import json
-import os
-import sys
-from src.parse_args import args
-os.environ['CUDA_VISIBLE_DEVICES'] = '{}'.format(args.gpu)
 
-import src.common.ops as ops
-import src.data_processor.data_loader as data_loader
-import src.data_processor.processor_utils as data_utils
-from src.data_processor.data_processor import preprocess
-from src.data_processor.vocab_processor import build_vocab
-from src.data_processor.schema_graph import SchemaGraph
-from src.data_processor.path_utils import get_model_dir, get_checkpoint_path
-from src.demos.demos import Text2SQLWrapper
-import src.eval.eval_tools as eval_tools
-from src.eval.wikisql.lib.dbengine import DBEngine
-from src.semantic_parser.ensemble_configs import model_dirs as ensemble_model_dirs
-from src.semantic_parser.learn_framework import EncoderDecoderLFramework
-from src.trans_checker.args import args as cs_args
-import src.utils.utils as utils
-
-import torch
 # if not args.data_parallel:
 #     torch.cuda.set_device('cuda:{}'.format(args.gpu))
 # torch.manual_seed(args.seed)

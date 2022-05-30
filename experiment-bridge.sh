@@ -168,8 +168,8 @@ cmd="python3 -m src.experiments \
     --curriculum_interval $curriculum_interval \
     --num_peek_steps $num_peek_steps \
     --num_accumulation_steps $num_accumulation_steps \
-    --train_batch_size $train_batch_size \
-    --dev_batch_size $dev_batch_size \
+    --train_batch_size 4 \
+    --dev_batch_size 4 \
     --encoder_input_dim $encoder_input_dim \
     --encoder_hidden_dim $encoder_hidden_dim \
     --decoder_input_dim $decoder_input_dim \

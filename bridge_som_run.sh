@@ -120,7 +120,7 @@ if [[ $random_field_order = *"True"* ]]; then
     random_field_order_flag="--random_field_order"
 fi
 
-cmd="python3 bridge_som_run.py \
+cmd="python bridge_som.py \
     $exp \
     --data_dir $data_dir \
     --db_dir $db_dir \

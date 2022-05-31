@@ -201,5 +201,5 @@ cmd="python3 -m src.somresearch.bridge_som \
     --gpu $gpu \
     $ARGS"
 
-echo "run $cmd"
+# echo "run $cmd"
 $cmd
